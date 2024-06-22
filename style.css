@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --a:
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    background: linear-gradient(180deg, #8e1ae9, #001b8c);
+    width: 100%;
+    margin: 0px auto;
+    height: 100vh;
+    position: relative;
+}
+
+.search-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.search-inputs input {
+    border: transparent;
+    outline: transparent;
+    border-radius: 5px;
+    height: 35px;
+    width: 15vw;
+    padding: 0px 2px 0px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    width: 30vw;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 50px 26px 22px;
+    align-items: center;
+    position: relative;
+    height: 12vh;
+}
+
+#search-picture {
+    width: 26px;
+    height: 26px;
+}
+
+#search-picture:active {
+    /* filter:invert(1); */
+    transform: scale(0.8);
+}
+
+#Search-choice {
+    height: 24px;
+    border-radius: 17px;
+    border: transparent;
+    outline: none;
+    padding: 0px 8px;
+    background-color: transparent;
+    color: white;
+    width: 12px;
+}
+
+#Search-choice option {
+    background-color: #FCFCFC;
+    color: #001053;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification {
+    display: flex;
+}
+
+#noti {
+    width: 25px;
+    height: 25px;
+}
+
+#noti:focus {
+    background-color: grey;
+}
+
+#noti-arrow {
+    width: 12px;
+    height: 12px;
+    filter: invert(1);
+}
+.noti-circle {
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    position: absolute;
+    border-radius: 6px;
+    right: 66px;
+    top: 37%;
+}
+.notification-click {
+    position: absolute;
+    width: 244px;
+    background-color: #FCFCFC;
+    height: 30vh;
+    right: 11px;
+    top: 83px;
+    border-radius: 6px;
+    z-index: 1;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    cursor: pointer;
+}
+
+.notification-click h2 {
+    color: #444E72;
+    font-size: 20px;
+    padding: 0px 14px 6px;
+}
+
+.realnotification {
+    padding: 5px 12px;
+    font-size: 13px;
+    display: flex;
+    color: #838BAA;
+    align-items: center;
+    gap: 4%;
+    line-height: 17px;
+}
+
+.realnotification img {
+    width: 10px;
+    height: 10px;
+}
+
+.realnotification:hover {
+    background-color: #95e4ff87;
+    color: #444E72;
+}
+
+.weatherimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    position: relative;
+    height: 30vh;
+}
+
+.weatherimg h1 {
+    text-align: center;
+}
+
+.weather1 {
+    height: 108px;
+    width: 130px;
+}
+
+.weather2 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: 111px;
+    left: 373px;
+}
+
+
+.weatherinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #001053;
+    width: 80%;
+    margin: 0px auto;
+    border-radius: 12px;
+    color: white;
+    padding: 22px;
+    box-sizing: border-box;
+    gap: 16px;
+    margin-top: 18px;
+    min-height: 40vh;
+    justify-content: center;
+}
+
+#date {
+    font-size: 28px;
+    text-align: center;
+}
+
+#temp {
+    font-size: 40px;
+    transition: all 0.8s ease-in;
+    font-size: 35px;
+}
+
+#mood {
+    font-size: 22px;
+}
+
+.wind {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 22px;
+}
+
+.humidity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 22px;
+}
+
+.wind img,
+.humidity img {
+    height: 20px;
+    width: 20px;
+}
+
+.ask-location {
+    border-radius: 7px;
+    position: absolute;
+    height: 45vh;
+    width: 55%;
+    color: black;
+    background-color: black;
+    color: #444E72;
+    margin: 0px auto;
+    bottom: 207px;
+    z-index: 1;
+    left: 24%;
+    display: flex;
+}
+.ask-img img {
+    width: 25vw;
+    height: 45vh;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.ask-city {
+    flex-grow: 1;
+    padding: 29px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.ask-city h2:hover {
+    text-decoration-line: overline;
+    text-decoration-color: #FCFCFC;
+}
+.ask-city h2{
+    /* font-size: 10px; */
+}
+
+.ask-city input {
+    width: 17vw;
+    border-radius: 5px;
+    height: 28px;
+    border: transparent;
+    padding: 0px 8px;
+    outline: none;
+    background-color: gray;
+}
+
+#ask-cancelbutton {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#ask-submit {
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: transparent;
+    background: #444E72;
+    width: 74px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#ask-submit:active {
+    transform: scale(0.9);
+    background-color: #FCFCFC;
+}
+
+#ask-description {
+    color: #FCFCFC;
+    font-size: 9px;
+    position: absolute;
+    bottom: 9px;
+}
+
+
+@media only screen and (max-width:500px) {
+    .notification-click {
+        width: 157px;
+        top: 95px;
+    }
+    .ask-location{
+        width: 70%;
+        left: 16%;
+    }
+    .ask-city input{
+        width: 30vw;
+    }
+    .ask-city h2 {
+        font-size: 18px;
+    }
+    #ask-description{
+        font-size: 7px;
+    }
+
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    /* Adjust height */
+    width: 20px;
+    /* Adjust width */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20 20"><path fill="red" d="M10 8.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95 1.414-1.414z"/></svg>') no-repeat center;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ask-city input::placeholder{
+    color: rgb(173, 7, 7);
+    opacity: 1;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container blur">
+        <div class="searchbar">
+            <div class="search">
+                <img src="Pictures/search.png" id="search-picture">
+                <div class="search-inputs">
+                    <input type="search" placeholder="Choose option first..." id="cord1">
+                </div>
+                <select id="Search-choice">
+                    <option value="select by">Search by</option>
+                    <option value="city">City</option>
+                    <option value="coordinates">Coordinates</option>
+                </select>
+            </div>
+            <div class="notification">
+                <img src="Pictures/bell.png" id="noti">
+                <img data-folder="rotate-0" data-folder="rotate-1" src="Pictures/uparrow.png" id="noti-arrow">
+            </div>
+            <div class="notification-click display_none">
+                <h2>Your notification</h2>
+                <!-- <div class="realnotification">
+                    <img src="Pictures/noti.png">
+                    <p>There might be heavy rain in two days in your area</p>
+                </div> -->
+                
+            </div> 
+            <!-- <div class="noti-circle">
+                
+            </div> -->
+        </div>
+        <div class="weatherimg">
+            <img src="Pictures/suncloud.png" class="weather1">
+            <h1>Name of the city</h1>
+        </div>
+        <div class="weatherinfo">
+            <p id="date">Date</p>
+            <h1 id="temp">Temp</h1>
+            <p id="mood">Mood</p>
+            <div class="wind">
+                <img src="Pictures/wind.png">
+                <p>Wind  | km/hr</p>
+            </div>
+            <div class="humidity">
+                <img src="Pictures/water-drop.png">
+                <p>Humidity  | %</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="ask-location">
+        <div class="ask-img">
+            <img src="Pictures/weather.jpg">
+        </div>
+        <div class="ask-city">
+            <img src="Pictures/cancel.png" id="ask-cancelbutton">
+            <h2>Please enter your city name</h2>
+            <input type="search">
+            <button id="ask-submit">Submit</button>
+            <p id="ask-description">*City name is being asked so that you can get weather updates every 3 hours if you dont want to share your location please feel free to press the cancel button</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
