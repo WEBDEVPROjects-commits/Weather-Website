@@ -21,17 +21,17 @@ function getcity() {
 
 function mood(temp) {
     if (temp < 15) {
-        document.querySelector(".weather1").src = "Pictures/snowing.png"
+        document.querySelector(".weather1").src = "snowing.png"
     }
     else if (temp >= 15 && temp < 25) {
-        document.querySelector(".weather1").src = "Pictures/snowing.png"
+        document.querySelector(".weather1").src = "snowing.png"
     }
     else if (temp >= 25 && temp < 40) {
-        document.querySelector(".weather1").src = "Pictures/suncloud.png"
+        document.querySelector(".weather1").src = "suncloud.png"
         // document.querySelector("#temp").style.color="#dfb847"
     }
     else if (temp >= 40) {
-        document.querySelector(".weather1").src = "Pictures/sun.png"
+        document.querySelector(".weather1").src = "sun.png"
         // document.querySelector("#temp").style.color="red"
     }
 
@@ -97,13 +97,13 @@ async function threehourforecast(city) {
                 updatedtime = `${time - 12}:00PM`
             }
             document.querySelector(".notification-click").insertAdjacentHTML("beforeend", `<div class="realnotification">
-                    <img src="Pictures/noti.png">
+                    <img src="noti.png">
                     <p>The max temp. could reach ${json_obj.list[0].main.temp_max}° in ${json_obj.city.name}</p>
                     <p>${updatedtime}</p>
                  </div>`)
         } catch (error) {
             document.querySelector(".notification-click").insertAdjacentHTML("beforeend", `<div class="realnotification">
-            <img src="Pictures/noti.png">
+            <img src="noti.png">
             <p>You entered invalid city.<a href="#" onclick="location.reload()">Enter city again</a></p>
          </div>`)
         }
@@ -161,7 +161,7 @@ function addnoticircle() {
 async function addinstruction() {
     return new Promise((resolve, reject) => {
         document.querySelector(".notification-click").insertAdjacentHTML("beforeend", `<div class="realnotification">
-        <img src="Pictures/noti.png">
+        <img src="noti.png">
         <p>You can Enter  your city again for every 3 hour weather update <a href="#" onclick="location.reload()">click here<a/></p>
         </div>`)
         resolve(1)
